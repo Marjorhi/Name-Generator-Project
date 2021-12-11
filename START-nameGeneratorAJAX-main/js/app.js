@@ -16,7 +16,12 @@ function loadNames(e) {
     let url ='http://uinames.com/api/?';
     //Read the Origin and Append to the URL
     if(origin !== '') {
-        url += `?region=${origin}`;
+        url += `region=${origin}&`;
+    }
+
+        //Read the Genre and Append to the URL
+    if(genre !== '') {
+        url += `gender=${genre}&`;
 
         console.log(url);
     }
