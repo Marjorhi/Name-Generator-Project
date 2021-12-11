@@ -1,3 +1,4 @@
+header("Access-Control-Allow-Origin: http://uinames.com/api/?");
 document.querySelector('#generate-names').addEventListener('submit', loadNames);
 
 
@@ -11,4 +12,7 @@ function loadNames(e) {
     const origin = document.getElementById('country').value;
     const genre = document.getElementById('genre').value;
     const amount = document.getElementById('quantity').value;
+
+    //Build the URL
+    let url ='http://uinames.com/api/?';
 }
