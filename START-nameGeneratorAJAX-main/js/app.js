@@ -1,4 +1,3 @@
-header("Access-Control-Allow-Origin: http://uinames.com/api/?");
 document.querySelector('#generate-names').addEventListener('submit', loadNames);
 
 
@@ -15,4 +14,10 @@ function loadNames(e) {
 
     //Build the URL
     let url ='http://uinames.com/api/?';
+    //Read the Origin and Append to the URL
+    if(origin !== '') {
+        url += `?region=${origin}`;
+
+        console.log(url);
+    }
 }
