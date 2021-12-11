@@ -26,7 +26,21 @@ function loadNames(e) {
     //Read the Amount and Append to the URL
     if(amount !== '') {
         url += `amount=${amount}&`;
-
-        console.log(url);
     }
+    //Ajax Call
+    const xhr = new XMLHttpRequest();
+
+    //Open the connection
+    xhr.open('GET',url, true);
+
+    //Execute the function
+    xhr.onload = function() {
+        if(this.status === 200) {
+            const names = JSON.parse(this.responseText);
+            console.log(names);
+        }
+    }
+
+    //Send the request
+    xhr.send();
 }
