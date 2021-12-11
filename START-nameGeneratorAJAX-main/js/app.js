@@ -22,6 +22,10 @@ function loadNames(e) {
         //Read the Genre and Append to the URL
     if(genre !== '') {
         url += `gender=${genre}&`;
+    }
+    //Read the Amount and Append to the URL
+    if(amount !== '') {
+        url += `amount=${amount}&`;
 
         console.log(url);
     }
